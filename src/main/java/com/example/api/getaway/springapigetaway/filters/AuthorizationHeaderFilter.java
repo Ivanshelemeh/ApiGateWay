@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
 public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<AuthorizationHeaderFilter.ConfigFilter> {
 
     @Autowired
-    Environment environment;
+   private Environment environment;
 
     public AuthorizationHeaderFilter() {
         super(ConfigFilter.class);
