@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
 public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<AuthorizationHeaderFilter.ConfigFilter> {
 
     @Autowired
-    Environment environment;
+   private Environment environment;
 
     public AuthorizationHeaderFilter() {
         super(ConfigFilter.class);
@@ -47,7 +47,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     }
 
     public static class ConfigFilter {
-        //Put some code
+        //TODO
     }
 
     private boolean isJwtValid(String jwt) {

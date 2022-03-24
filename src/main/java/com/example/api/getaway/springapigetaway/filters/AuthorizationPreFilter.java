@@ -18,9 +18,9 @@ public class AuthorizationPreFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        logger.info("pre filter authorize ..");
+        logger.info("pre filter authorize starts..");
 
-        String requestHeader = exchange.getRequest().getPath().toString();
+        String reqHeader = exchange.getRequest().getPath().toString();
         HttpHeaders headers = exchange.getRequest().getHeaders();
         Set<String> keyHeaders = headers.keySet();
         keyHeaders.forEach((keyHeader) -> {
