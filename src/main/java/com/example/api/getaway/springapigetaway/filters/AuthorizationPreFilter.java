@@ -11,6 +11,11 @@ import reactor.core.publisher.Mono;
 
 import java.util.Set;
 
+/**
+ * @author shele
+ * This is filter which starts to act
+ * when request has been come
+ */
 @Component
 public class AuthorizationPreFilter implements GlobalFilter {
 

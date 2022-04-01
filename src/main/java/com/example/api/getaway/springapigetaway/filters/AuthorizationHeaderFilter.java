@@ -13,6 +13,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+/**
+ * @author shele
+ * Authorization filter for header incoming request
+ * and checking validation of jwt token
+ */
 @Component
 public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<AuthorizationHeaderFilter.ConfigFilter> {
 
@@ -47,7 +52,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     }
 
     public static class ConfigFilter {
-        //TODO
+
     }
 
     private boolean isJwtValid(String jwt) {
